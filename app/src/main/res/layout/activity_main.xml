@@ -35,8 +35,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Banco UTN Santa Fe"
-                android:textSize="25dp"
+                android:text="@string/banco_utn_santa_fe"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 />
         </LinearLayout>
@@ -49,7 +49,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="Para constituir tu plazo fijo necesitamos que nos proveas algunos datos." />
+            android:text="@string/mensaje_datos" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,14 +60,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre" />
+                android:text="@string/nombre" />
 
             <EditText
                 android:id="@+id/nombreEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:inputType="textCapWords"/>
+                android:layout_marginStart="10dp"
+                android:inputType="textCapWords" />
 
         </LinearLayout>
 
@@ -81,14 +81,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apellido"/>
+                android:text="@string/apellido"/>
 
             <EditText
                 android:id="@+id/apellidoEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:inputType="textCapWords" />
+                android:layout_marginStart="10dp"
+                android:inputType="textCapWords"/>
 
         </LinearLayout>
 
@@ -104,31 +104,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Moneda"/>
+                android:text="@string/moneda"/>
 
             <Spinner
                 android:id="@+id/monedasSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:spinnerMode="dropdown"
                 android:entries="@array/listaMonedas"/>
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/botonSimular"
+            android:id="@+id/simularButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="@string/simular"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="onSimular"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp">
             <Button
+                android:id="@+id/constituirButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
