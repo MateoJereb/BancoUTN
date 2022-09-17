@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BancoUTN</string>
+    <string name="simular">SIMULAR</string>
+    <string name="constituir">CONSTITUIR</string>
 </resources>
