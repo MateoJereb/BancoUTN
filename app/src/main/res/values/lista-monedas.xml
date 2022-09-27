@@ -2,7 +2,7 @@
 <resources>
     <string-array name="listaMonedas">
         <item>Pesos</item>
-        <item>Dolares</item>
+        <item>Dólares</item>
         <item>Euros</item>
     </string-array>
 </resources>

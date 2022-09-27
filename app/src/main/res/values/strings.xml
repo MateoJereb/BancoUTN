@@ -13,7 +13,7 @@
     <string name="renovacion_automatica">Con renovación automática</string>
     <string name="titulo_simulacion">Simulador Plazo Fijo en Pesos</string>
     <string name="dias_30">30 días</string>
-    <string name="plazo">Plazo:</string>
+    <string name="plazo">Plazo: 30 días</string>
     <string name="capital">Capital:</string>
     <string name="intereses_ganados">Intereses ganados:</string>
     <string name="monto_total">Monto total:</string>
