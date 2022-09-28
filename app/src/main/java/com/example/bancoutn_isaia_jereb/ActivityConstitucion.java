@@ -24,6 +24,7 @@ import java.util.regex.Pattern;
 public class ActivityConstitucion extends AppCompatActivity {
 
     private ActivityConstitucionBinding binding;
+    private String signoMoneda = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,22 @@ public class ActivityConstitucion extends AppCompatActivity {
         setContentView(view);
 
         setTitle("Simular Plazo Fijo");
+
+        int moneda = (int) getIntent().getExtras().getLong("moneda");
+        switch (moneda){
+            case 0:
+                signoMoneda = "$";
+                binding.simuladorTextView.setText("Simulador Plazo Fijo en Pesos");
+                break;
+            case 1:
+                signoMoneda = "US$";
+                binding.simuladorTextView.setText("Simulador Plazo Fijo en Dólares");
+                break;
+            case 2:
+                signoMoneda = "\u20AC";
+                binding.simuladorTextView.setText("Simulador Plazo Fijo en Euros");
+                break;
+        }
 
         binding.diasSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -94,10 +111,10 @@ public class ActivityConstitucion extends AppCompatActivity {
                 montoAnual = Math.round(montoAnual*100.0)/100.0;
 
                 String  plazoStr = "Plazo: "+plazo*30+" días",
-                        capitalStr = "Capital: $"+capital,
-                        interesesStr = "Intereses ganados: $"+intereses,
-                        montoTotalStr = "Monto total: $"+montoTotal,
-                        montoAnualStr = "Monto anual: $"+montoAnual;
+                        capitalStr = "Capital: "+signoMoneda+capital,
+                        interesesStr = "Intereses ganados: "+signoMoneda+intereses,
+                        montoTotalStr = "Monto total: "+signoMoneda+montoTotal,
+                        montoAnualStr = "Monto anual: "+signoMoneda+montoAnual;
 
                 binding.plazoTextView.setText(plazoStr);
                 binding.capitalTextView.setText(capitalStr);
